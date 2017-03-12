@@ -7,15 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "lite-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "es6-oop-js"
-  },
   "keywords": [
     "ES6",
-    "Object",
-    "Oriented",
-    "Programming",
+    "Object Oriented Programming",
     "JavaScript"
   ],
   "author": "Zoran Gorgiev",
