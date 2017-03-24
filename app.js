@@ -6,16 +6,10 @@ import {DataClass} from '/data/data-class.js';
 import {Button} from '/user-interface/button.js';
 import {Image} from '/user-interface/image.js';
 import {TitleBar} from '/user-interface/title-bar.js';
+import {DataTable} from '/user-interface/data-table.js';
 
-// let button = new Button('Click Me!');
-// button.appendToElement($('body'));
-
-// let image = new Image('./images/whiskey.jpg');
-// image.appendToElement($('body'));
-
-let titleBar = new TitleBar('Whiskey in the jar!');
-titleBar.addLink('Home', '');
-titleBar.addLink('Scotch', '');
-titleBar.addLink('Irish', '');
-titleBar.addLink('American', '');
-titleBar.appendToElement($('body'));
+let headers = "Brand Category Distiller Owner Description".split(' ');
+let dataService = new DataClass();
+dataService.displayData(data);
+let dataTable = new DataTable(headers, dataService.irish);
+dataTable.appendToElement($('body'));

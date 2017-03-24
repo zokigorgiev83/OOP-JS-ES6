@@ -24,6 +24,8 @@ export class DataClass  {
                         this.errors.push(error);
                     }
                     break;
+                    // this.scotch.push(whiskey);
+                    // break;
                 case 'irish':
                     this.irish.push(whiskey);
                     break;
