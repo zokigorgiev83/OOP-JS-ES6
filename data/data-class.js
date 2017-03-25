@@ -24,13 +24,25 @@ export class DataClass  {
                         this.errors.push(error);
                     }
                     break;
-                    // this.scotch.push(whiskey);
-                    // break;
                 case 'irish':
-                    this.irish.push(whiskey);
+                    if(this.validateScotchData(whiskey)) {
+                        let irishWhiskey = this.loadScotch(whiskey);
+                        if(irishWhiskey)
+                            this.irish.push(irishWhiskey);
+                    } else {
+                        let error = new DataError('Invalid irish whiskey data', whiskey);
+                        this.errors.push(error);
+                        }
                     break;
                 case 'american':
-                    this.american.push(whiskey);
+                    if(this.validateScotchData(whiskey)) {
+                        let americanWhiskey = this.loadScotch(whiskey);
+                        if(americanWhiskey)
+                            this.american.push(americanWhiskey);
+                    } else {
+                        let error = new DataError('Invalid american whiskey data', whiskey);
+                        this.errors.push(error);
+                        }
                     break;
                 default:
                     let error = new DataError('Invalid whiskey type', whiskey);
